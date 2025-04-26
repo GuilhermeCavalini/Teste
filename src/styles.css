@@ -104,7 +104,8 @@ h1 {
 
 .result-value {
     color: #111827;
-
+}
+    
 @media (max-width: 600px) {
     .container {
         padding: 15px;
