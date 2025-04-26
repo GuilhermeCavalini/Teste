@@ -160,12 +160,20 @@ function App() {
 
       {resultado && (
         <div className="result-box">
-          <h3>Objeto final:</h3>
-          <pre>{JSON.stringify(resultado, null, 2)}</pre>
+          <h3>Dados Atualizados:</h3>
+          <div className="result-list">
+            {Object.entries(resultado).map(([chave, valor]) => (
+              <div key={chave} className="result-item">
+                <span className="result-key">{chave}:</span>
+                <span className="result-value">{String(valor)}</span>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
   );
 }
+
 
 export default App;
